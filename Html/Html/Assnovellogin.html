@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Novell Services Login</h1>
+    <table border="2px solid black">
+      <tbody>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" name="name" /></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+          <td>City of Employment</td>
+          <td><input type="text" name="coe" /></td>
+        </tr>
+        <tr>
+          <td>Web Server</td>
+          <td>
+            <select name="server" id="server">
+              <option value="default">please select</option>
+              <option value="tomcat">tomcat</option>
+              <option value="ibatis">ibatis</option>
+              <option value="pixelmon">pixelmon</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Please specify your role</td>
+          <td>
+            <input type="radio" id="1" name="role" value="Admin" />Admin <br />
+            <input type="radio" id="2" name="role" value="Engineer" />Engineer
+            <br />
+            <input type="radio" id="3" name="role" value="Manager" />Manager
+            <br />
+            <input type="radio" id="4" name="role" value="Guest" />Guest <br />
+          </td>
+        </tr>
+        <tr>
+          <td>Single sign-on to the following</td>
+          <td>
+            <input type="radio" id="1" name="sign" value="mail" />mail
+            <input type="radio" id="2" name="sign" value="Payroll" />Payroll
+            <input type="radio" id="3" name="sign" value="self service" />self
+            service
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

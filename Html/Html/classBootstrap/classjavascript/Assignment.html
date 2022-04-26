@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let names = ["mukilan", "mohan", "raj", "krishna", "ravi"];
+
+      for (n in names) {
+        console.log(names[n]);
+      }
+      console.log("-------------------------");
+      let person = {
+        nickname: "mukilan",
+        age: 22,
+        address: "dharmapuri",
+        Gender: "Male",
+      };
+      for (const prop in person) {
+        console.log(person[prop]);
+      }
+      //---------------------------------------
+      console.log("-------------------------");
+      for (const iterator of names) {
+        console.log(iterator);
+      }
+      console.log("-------------------------");
+      let numbers = [10, 20, 30, 40, 50, 60];
+      for (const num of numbers) {
+        console.log(num);
+      }
+      console.log("-----Prime Number -------");
+
+      //By Named Function
+      function primeNum(num) {
+        if (num <= 0) {
+          return "Invalid Input";
+        }
+        for (let i = 2; i < num; i++) {
+          if (num % i == 0) {
+            //console.log(num + " Is not a prime !");
+            return num + " Is not a prime !";
+          }
+        }
+        return num + " Is Prime";
+      }
+      console.log(primeNum(7));
+
+      //Anonyms function
+      let primeNumber = function (num) {
+        if (num <= 0) {
+          return "Invalid Input";
+        }
+        for (let i = 2; i < num; i++) {
+          if (num % i == 0) {
+            //console.log(num + " Is not a prime !");
+            return num + " Is not a prime !";
+          }
+        }
+        return num + " Is Prime";
+      };
+      console.log(primeNumber(12));
+
+      //By arrow function
+      let primeArrow = (num) => {
+        if (num <= 0) {
+          return "Invalid Input";
+        }
+        for (let i = 2; i < num; i++) {
+          if (num % i == 0) {
+            //console.log(num + " Is not a prime !");
+            return num + " Is not a prime !";
+          }
+        }
+        return num + " Is Prime";
+      };
+      console.log(primeArrow(2));
+
+      //Immediately invoked function
+      (function (num) {
+        if (num <= 0) {
+          return "Invalid Input";
+        }
+        for (let i = 2; i < num; i++) {
+          if (num % i == 0) {
+            //console.log(num + " Is not a prime !");
+            console.log(num + " Is not a prime !");
+            return 0;
+          }
+        }
+        console.log(num + " Is prime");
+      })(20);
+
+      console.log("----  Factorial !  -------");
+      //Named Function
+      function factorial(num) {
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+          result *= i;
+        }
+        return "Factorial of " + num + " Is: " + result;
+      }
+      console.log(factorial(5));
+      //Annonyms Function
+      let factorialNum = function (num) {
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+          result *= i;
+        }
+        return "Factorial of " + num + " Is: " + result;
+      };
+      console.log(factorialNum(4));
+      //Arrow function
+      let factorialArrow = (num) => {
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+          result *= i;
+        }
+        return "Factorial of " + num + " Is: " + result;
+      };
+      console.log(factorialNum(6));
+
+      //Immediate function
+      (function (num) {
+        let result = 1;
+        for (let i = 1; i <= num; i++) {
+          result *= i;
+        }
+        console.log("Factorial of " + num + " Is: " + result);
+      })(3);
+
+      console.log("----- String Methods ------");
+      let word = "Hello!,how are you ?";
+      let wordUpper = word.toUpperCase();
+      let wordlower = word.toLowerCase();
+      console.log(word);
+      console.log(wordUpper);
+      console.log(wordlower);
+      console.log(word.length);
+      console.log(word.slice(1, 2));
+      console.log(word.substring(2, 5));
+      console.log(word.replace("are", "hi"));
+    </script>
+  </body>
+</html>
